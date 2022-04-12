@@ -42,9 +42,7 @@
                 </div>
                 <div style="color: white;">
                     <h1>Dashboard Page</h1>
-                    <a href="{{url('/')}}">Dashboard</a> |
-                    <a href="{{URL::to('/about')}}">About</a> |
-                    <a href="{{route('lindi')}}">Contact</a> |
+                    <a href="{{url('/')}}">Dashboard</a>
                 </div>
 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
