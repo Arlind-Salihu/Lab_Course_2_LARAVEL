@@ -1,82 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{asset('adminbackend/../images/fa')}}vicon.ico">
 
-    <!-- Twitter -->
-    <meta name="twitter:site" content="@themepixels">
-    <meta name="twitter:creator" content="@themepixels">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Starlight">
-    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
-    <meta name="twitter:image" content="http://themepixels.me/starlight/img/starlight-social.png">
-
-    <!-- Facebook -->
-    <meta property="og:url" content="http://themepixels.me/starlight">
-    <meta property="og:title" content="Starlight">
-    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
-
-    <meta property="og:image" content="http://themepixels.me/starlight/img/starlight-social.png">
-    <meta property="og:image:secure_url" content="http://themepixels.me/starlight/img/starlight-social.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="600">
-
-    <!-- Meta -->
-    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
-    <meta name="author" content="ThemePixels">
-
-    <title>Starlight Responsive Bootstrap 4 Admin Template</title>
-
-    <!-- vendor css -->
-    <link href="{{asset('/adminbackend/lib/font-awesome/c')}}ss/font-awesome.css" rel="stylesheet">
-    <link href="{{asset('/adminbackend/lib/Ionicons/css/i')}}onicons.css" rel="stylesheet">
-    <link href="{{asset('/adminbackend/lib/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet">
-    <link href="{{asset('/adminbackend/lib/rickshaw/ricks')}}haw.min.css" rel="stylesheet">
-
-    <!-- Starlight CSS -->
-    <link rel="stylesheet" href="{{asset('/adminbackend/css/starlight.css')}}">
+    <title>Sunny Admin - Dashboard</title>
+    
+	<!-- Vendors Style-->
+	<link rel="stylesheet" href="{{asset('adminbackend/css/vendors_css.css')}}">
+	  
+	<!-- Style-->  
+	<link rel="stylesheet" href="{{asset('adminbackend/css/style.css')}}">
+	<link rel="stylesheet" href="{{asset('adminbackend/css/skin_color.css')}}">
+     
   </head>
 
-  <body>
+<body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
+	
+<div class="wrapper">
+
+  
+  @include('admin.body.header')
+  <!-- Left side column. contains the logo and sidebar -->
 
   @include('admin.body.sidebar')
-  @include('admin.body.header')
 
-    <!-- ########## START: RIGHT PANEL ########## -->
-    <!-- ########## END: RIGHT PANEL ########## --->
+  @yield('admin')
 
-    <!-- ########## START: MAIN PANEL ########## -->
-    <div class="sl-mainpanel">
-      <nav class="breadcrumb sl-breadcrumb">
-        <a class="breadcrumb-item" href="index.html">Starlight</a>
-        <span class="breadcrumb-item active">Dashboard</span>
-      </nav>
-      
-      @yield('admin')
-      
-      @include('admin.body.footer')
-      
-    </div><!-- sl-mainpanel -->
-    <!-- ########## END: MAIN PANEL ########## -->
+  <!-- Content Wrapper. Contains page content -->
+  <!-- /.content-wrapper -->
 
-    <script src="{{asset('adminbackend/lib/jquery/jquery.js')}}"></script>
-    <script src="{{asset('adminbackend/lib/popper.js/popper.js')}}"></script>
-    <script src="{{asset('adminbackend/lib/bootstrap/bootstrap.js')}}"></script>
-    <script src="{{asset('adminbackend/lib/jquery-ui/jquery-ui.js')}}"></script>
-    <script src="{{asset('adminbackend/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js')}}"></script>
-    <script src="{{asset('adminbackend/lib/jquery.sparkline.bower/jquery.sparkline.min.js')}}"></script>
-    <script src="{{asset('adminbackend/lib/d3/d3.js')}}"></script>
-    <script src="{{asset('adminbackend/lib/rickshaw/rickshaw.min.js')}}"></script>
-    <script src="{{asset('adminbackend/lib/chart.js/Chart.js')}}"></script>
-    <script src="{{asset('adminbackend/lib/Flot/jquery.flot.js')}}"></script>
-    <script src="{{asset('adminbackend/lib/Flot/jquery.flot.pie.js')}}"></script>
-    <script src="{{asset('adminbackend/lib/Flot/jquery.flot.resize.js')}}"></script>
-    <script src="{{asset('adminbackend/lib/flot-spline/jquery.flot.spline.js')}}"></script>
-    <script src="{{asset('adminbackend/js/starlight.js')}}"></script>
-    <script src="{{asset('adminbackend/js/ResizeSensor.js')}}"></script>
-    <script src="{{asset('adminbackend/js/dashboard.js')}}"></script>
-  </body>
+  @include('admin.body.footer')
+  
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+  
+</div>
+<!-- ./wrapper -->
+  	
+	 
+	<!-- Vendor JS -->
+	<script src="{{asset('adminbackend/js/vendors.min.js')}}"></script>
+    <script src="{{asset('../assets/icons/feather-icons/feather.min.js')}}"></script>
+	<script src="{{asset('../assets/vendor_components/easypiechart/dist/jquery.easypiechart.js')}}"></script>
+	<script src="{{asset('../assets/vendor_components/apexcharts-bundle/irregular-data-series.js')}}"></script>
+	<script src="{{asset('../assets/vendor_components/apexcharts-bundle/dist/apexcharts.js')}}"></script>
+	
+	<!-- Sunny Admin App -->
+	<script src="{{asset('adminbackend/js/template.js')}}"></script>
+	<script src="{{asset('adminbackend/js/pages/dashboard.js')}}"></script>
+	
+	
+</body>
 </html>

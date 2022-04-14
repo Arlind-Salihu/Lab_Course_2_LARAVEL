@@ -6,7 +6,7 @@ use App\Http\Controllers\MainUserController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::group(['prefix'=>'admin','middleware'=>['admin:admin']],function(){
@@ -24,4 +24,7 @@ Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function(
     return view('user.index');
 })->name('dashboard');
 
-Route::get('/user/login', [MainUserController::class, 'Logout'])->name('user.logout');
+
+Route::get('/user/logout', [MainUserController::class, 'Logout'])->name('user.logout');
+
+Route::get('/admin/logout', [AdminController::class, 'destroy'])->name('admin.logout');
