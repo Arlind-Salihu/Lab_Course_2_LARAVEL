@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="{{asset('adminbackend/images/favicon.ico')}}">
+    <link rel="icon" href="{{asset('adminbackend/images/logo.png')}}">
 
-    <title>Sunny Admin - Log in </title>
+    <title>UBT SMIS - Log in </title>
   
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="{{asset('adminbackend/css/vendors_css.css')}}">

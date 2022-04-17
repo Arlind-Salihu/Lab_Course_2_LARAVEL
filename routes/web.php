@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MainUserController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\ExamController;
 
 
 Route::get('/', function () {
@@ -38,4 +39,16 @@ Route::prefix('users')->group(function(){
     Route::post('/store', [UserController::class, 'UserStore'])->name('user.store');
     Route::get('/edit/{id}', [UserController::class, 'UserEdit'])->name('user.edit');
     Route::post('/update/{id}', [UserController::class, 'UserUpdate'])->name('user.update');
+    Route::get('/delete/{id}', [UserController::class, 'UserDelete'])->name('user.delete');
+    Route::get('/exam/view', [ExamController::class, 'ExamView'])->name('exam.view');
+});
+
+//Exam Management All Routes
+Route::prefix('exams')->group(function(){
+    Route::get('/view', [ExamController::class, 'ExamViewAdm'])->name('exam.admin.view');
+    Route::get('/add', [ExamController::class, 'ExamAdd'])->name('exam.admin.add');
+    Route::post('/store', [ExamController::class, 'ExamStore'])->name('exam.store');
+    Route::get('/edit/{id}', [ExamController::class, 'ExamEdit'])->name('exam.edit');
+    Route::post('/update/{id}', [ExamController::class, 'ExamUpdate'])->name('exam.update');
+    Route::get('/delete/{id}', [ExamController::class, 'ExamDelete'])->name('exam.delete');
 });

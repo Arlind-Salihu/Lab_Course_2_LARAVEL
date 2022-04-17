@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="{{asset('adminbackend/../images/fa')}}vicon.ico">
+    <link rel="icon" href="{{asset('adminbackend/images/logo.png')}}">
 
-    <title>Sunny Admin - Dashboard</title>
+    <title>Admin Dashboard</title>
     
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="{{asset('adminbackend/css/vendors_css.css')}}">
@@ -59,7 +59,37 @@
 	<script src="{{asset('adminbackend/js/template.js')}}"></script>
 	<script src="{{asset('adminbackend/js/pages/dashboard.js')}}"></script>
 	
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+      $(document).on('click','#delete', function(e){
+        e.preventDefault();
+        var link = $(this).attr("href");
+
+        Swal.fire({
+        title: 'Are you sure to delete this user?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Delete!'
+        }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = link;
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          )
+        }
+      })
+      });
+    })
+  </script>
+
 
   <script>
     @if(Session::has('message'))

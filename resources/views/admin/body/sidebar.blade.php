@@ -22,7 +22,7 @@
             <i data-feather="pie-chart"></i>
 			<span>Dashboard</span>
           </a>
-        </li>  
+        </li>
 		
         <li class="treeview">
           <a href="#">
@@ -35,6 +35,7 @@
           <ul class="treeview-menu">
             <li><a href="{{route('user.view')}}"><i class="ti-more"></i>View User</a></li>
             <li><a href="{{route('user.add')}}"><i class="ti-more"></i>Add User</a></li>
+            <li><a href="{{route('exam.admin.view')}}"><i class="ti-more"></i>Grade User</a></li>
           </ul>
         </li> 
 		  
