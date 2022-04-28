@@ -100,11 +100,18 @@
 			  </li>
 			</ul>
 		  </li>	
+
+
+		  @php
+
+		  $admin = DB::table('admins') -> where('id',Auth::guard('admin')->user()->id)->first();
+
+		  @endphp
 		  
 	      <!-- User Account-->
           <li class="dropdown user user-menu">	
 			<a href="#" class="waves-effect waves-light rounded dropdown-toggle p-0" data-toggle="dropdown" title="User">
-				<img src="{{asset('adminbackend/images/avatar/1.jpg')}}" alt="">
+				<img src="{{ (!empty($admin -> image))? url ('upload/admin_images/'.$admin -> image):url('upload/no_image.jpg') }}" alt="">
 			</a>
 			<ul class="dropdown-menu animated flipInX">
 			  <li class="user-body">
