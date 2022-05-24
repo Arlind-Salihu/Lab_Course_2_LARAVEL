@@ -12,7 +12,7 @@
 			 <div class="box">
 				<div class="box-header with-border">
 				  <h3 class="box-title">Student Class List</h3>
-                  <a href="{{route('user.add')}}" style="float: right;" class="btn btn-rounded btn-success mb-5">Add Student Class</a>
+                  <a href="{{route('student.class.add')}}" style="float: right;" class="btn btn-rounded btn-success mb-5">Add Student Class</a>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
@@ -32,8 +32,8 @@
 								<td>{{$student->name}}</td>
 								
 								<td>
-                                    <a href="{{ route('users.edit', $student->id) }}" class="btn btn-primary">Edit</a>
-									<a href="{{ route('users.delete', $student->id) }}" class="btn btn-danger" id="delete">Delete</a>
+                                    <a href="{{ route('student.class.edit', $student->id) }}" class="btn btn-primary">Edit</a>
+									<a href="{{ route('student.class.delete', $student->id) }}" class="btn btn-danger" id="delete">Delete</a>
                                 </td>
 							</tr>
                             @endforeach
