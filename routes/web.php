@@ -76,8 +76,8 @@ Route::prefix('setups')->group(function(){
 
     Route::get('student/class/delete/{id}', [StudentClassController::class, 'StudentClassDelete'])->name('student.class.delete');
 
+
     //Student Year Routes
-       
     Route::get('student/year/view', [StudentYearController::class, 'ViewYear'])->name('student.year.view');
 
 
@@ -88,6 +88,12 @@ Route::prefix('setups')->group(function(){
 
 
     Route::get('student/year/edit/{id}', [StudentYearController::class, 'StudentYearEdit'])->name('student.year.edit'); 
+
+
+    Route::post('student/year/update/{id}', [StudentYearController::class, 'StudentYearUpdate'])->name('update.student.year');
+
+
+    Route::get('student/year/delete/{id}', [StudentYearController::class, 'StudentYearDelete'])->name('student.year.delete');
 
 });
 
