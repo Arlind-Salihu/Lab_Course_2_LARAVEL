@@ -10,7 +10,7 @@ class StudentGroupController extends Controller
 {
     public function ViewGroup(){
         $data['allData'] = StudentGroup::all();
-        return view('backend.setup.group.view_group ',$data);
+        return view('backend.setup.group.view_group',$data);
 
 
     }
