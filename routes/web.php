@@ -144,6 +144,12 @@ Route::prefix('setups')->group(function(){
     Route::get('student/shift/delete/{id}', [StudentShiftController::class, 'StudentShiftDelete'])->name('student.shift.delete');
 
 
+    //Fee Category Routes
+
+    Route::get('fee/category/view', [StudentShiftController::class, 'StudentShiftView'])->name('fee.category.view');
+
+
+
 
 });
 
