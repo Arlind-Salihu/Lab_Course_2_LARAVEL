@@ -8,7 +8,7 @@ use App\Models\StudentYear;
 
 class StudentYearController extends Controller
 {
-    //
+   
     public function ViewYear(){
         $data['allData'] = StudentYear::all();
         return view('backend.setup.year.view_year',$data);
