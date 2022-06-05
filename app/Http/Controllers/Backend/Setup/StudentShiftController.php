@@ -33,7 +33,7 @@ class StudentShiftController extends Controller
             'message' => 'Student Shift Inserted Succesfully',
             'alert-type' => 'success'
         );
-        return redirect()->route('student.shift.view ')->with($notification);
+        return redirect()->route('student.shift.view')->with($notification);
         
     }        
     

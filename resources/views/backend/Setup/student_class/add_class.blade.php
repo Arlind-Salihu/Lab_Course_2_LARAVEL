@@ -21,11 +21,11 @@
 <form method="POST" action="{{ route('store.student.class') }}" >
 @csrf
               <div class="row">
-                <div class="col-12>
+                <div class="col-12">
 
 
                 <div class="form-group">
-                    <h5>Student Class Name <span class="text-danger">*</span></h5>
+                    <h5>Student Class<span class="text-danger">*</span></h5>
                 <div class="controls">
                     <input type="text" name="name" class="form-control">
                     @error('name')

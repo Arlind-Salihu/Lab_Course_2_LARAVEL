@@ -21,7 +21,7 @@
 						<thead>
 							<tr>
 								<th width="5%">ID</th>
-								<th>Username</th>       
+								<th>Fee Category</th>       
 								<th width="25%">Action</th>
 							</tr>
 						</thead>

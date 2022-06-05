@@ -34,7 +34,7 @@ class FeeCategoryController extends Controller
             'message' => 'Fee Category Inserted Succesfully',
             'alert-type' => 'success'
         );
-        return redirect()->route('fee/category/view')->with($notification);
+        return redirect()->route('fee.category.view')->with($notification);
         
 }
 

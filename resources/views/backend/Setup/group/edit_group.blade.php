@@ -21,11 +21,11 @@
 <form method="POST" action="{{ route('update.student.group',$editData->id) }}" >
 @csrf
               <div class="row">
-                <div class="col-12>
+                <div class="col-12">
 
 
                 <div class="form-group">
-                    <h5>Student Group Name <span class="text-danger">*</span></h5>
+                    <h5>Student Group<span class="text-danger">*</span></h5>
                 <div class="controls">
                     <input type="text" name="name" class="form-control" value="{{ $editData->name }}">
                     @error('name')

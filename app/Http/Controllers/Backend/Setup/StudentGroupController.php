@@ -34,7 +34,7 @@ class StudentGroupController extends Controller
             'message' => 'Student Group Inserted Succesfully',
             'alert-type' => 'success'
         );
-        return redirect()->route('student.group.view ')->with($notification);
+        return redirect()->route('student.group.view')->with($notification);
         
     }           
         public function StudentGroupEdit($id){

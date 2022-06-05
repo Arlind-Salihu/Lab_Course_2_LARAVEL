@@ -32,7 +32,7 @@ class StudentClassController extends Controller
             'message' => 'Student Class Inserted Succesfully',
             'alert-type' => 'success'
         );
-        return redirect()->route('user.view')->with($notification);
+        return redirect()->route('student.class.view')->with($notification);
 
 
         
@@ -47,7 +47,8 @@ class StudentClassController extends Controller
 
     public function StudentClassUpdate(Request $request,$id){
 
-        $data = new StudentClass();
+        $data = StudentClass::find($id);
+        
         $validatedData = $request->validate([
             'name'=>'required|unique:student_classes,name,'.$data->id
 

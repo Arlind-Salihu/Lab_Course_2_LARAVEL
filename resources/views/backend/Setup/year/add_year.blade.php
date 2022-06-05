@@ -18,14 +18,14 @@
      <div class="row">
        <div class="col">
 
-<form method="POST" action="{{ route('store.student.') }}" >
+<form method="POST" action="{{ route('store.student.year') }}" >
 @csrf
               <div class="row">
-                <div class="col-12>
+                <div class="col-12">
 
 
                 <div class="form-group">
-                    <h5>Student Year Name <span class="text-danger">*</span></h5>
+                    <h5>Student Year<span class="text-danger">*</span></h5>
                 <div class="controls">
                     <input type="text" name="name" class="form-control">
                     @error('name')
@@ -48,7 +48,6 @@
    <!-- /.box-body -->
  </div>
  <!-- /.box -->
-
 </section>
 <!-- /.content -->
 
