@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\Setup\StudentYearController;
 use App\Http\Controllers\Backend\Setup\StudentGroupController; 
 use App\Http\Controllers\Backend\Setup\StudentShiftController; 
 use App\Http\Controllers\Backend\Setup\FeeCategoryController;
+use App\Http\Controllers\Backend\Setup\FeeAmountController;
 
 //TESTIM
 use App\Http\Controllers\Backend\ExamController;
@@ -163,7 +164,13 @@ Route::prefix('setups')->group(function(){
 
 
     Route::get('fee/category/delete/{id}', [FeeCategoryController::class, 'FeeCategoryDelete'])->name('fee.category.delete');
+    
 
+    //Fee Category Routes
+
+    Route::get('fee/amount/view', [FeeAmountController::class, 'ViewFeeAmount'])->name('fee.amount.view');
+
+    Route::get('fee/amount/add', [FeeAmountController::class, 'AddFeeAmount'])->name('fee.amount.add');
 
 
 });
